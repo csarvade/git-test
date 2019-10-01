@@ -17,12 +17,12 @@ pipeline {
                      
                
                 steps {
-			echo "Hi All, Welcome to QA ENV'
+			echo 'Hi All, Welcome to QA ENV'
 		}
 	}
         stage('Four') {
 		 steps {
-			echo "Hi All, Welcome to Prod ENV"
+			echo 'Hi All, Welcome to Prod ENV'
                         }
                
     }
