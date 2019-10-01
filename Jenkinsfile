@@ -24,7 +24,7 @@ pipeline {
 		 steps {
 			echo 'Hi All, Welcome to Prod ENV'
                         }
-               
+	}       
     }
 }
 
