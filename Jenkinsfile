@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('One') {
                 steps {
-                        echo 'Hi, this is Zulaikha from edureka'
+                        echo 'Hi all, Welcome to Dev ENV'
 			
                 }
         }
@@ -14,35 +14,17 @@ pipeline {
         }
 	    }
         stage('Three') {
-                when {
-                        not {
-                                branch "master"
-                        }
-                }
+                     
+               
                 steps {
-			echo "Hello"
-                        }
-        }
+			echo "Hi All, Welcome to QA ENV'
+		}
+	}
         stage('Four') {
-                parallel {
-                        stage('Unit Test') {
-                                steps{
-                                        echo "Running the unit test..."
-                                }
+		 steps {
+			echo "Hi All, Welcome to Prod ENV"
                         }
-                        stage('Integration test') {
-                        agent {
-                                docker {
-                                        reuseNode false
-					image 'ubuntu'
-                                        }
-			}
-				steps {
-					echo 'Running the integration test..'
-				}
-                               
-			}  }
-        }
+               
     }
 }
 
